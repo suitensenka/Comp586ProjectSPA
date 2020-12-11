@@ -73,7 +73,7 @@ namespace SpaServer
             app.UseHttpsRedirection();
 
             app.UseRouting();
-            app.UseCors(b => b.WithOrigins("http://spaclient586.s3-website-us-east-1.amazonaws.com", "http://localhost:4200").AllowAnyHeader().AllowAnyMethod());
+            app.UseCors(b => b.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
 
             app.UseAuthentication();
             app.UseAuthorization();

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Suiten\\Desktop\\CS OOSD\\CoreAngSeparate\\SpaServer\\SpaServer\\SpaServer.csproj": {}
+    "C:\\Users\\Suiten\\Desktop\\CS OOSD\\CoreAngSeparate\\Comp586Project\\Comp586ProjectSPA\\SpaServer\\SpaServer\\SpaServer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Suiten\\Desktop\\CS OOSD\\CoreAngSeparate\\SpaServer\\SpaServer\\SpaServer.csproj": {
+    "C:\\Users\\Suiten\\Desktop\\CS OOSD\\CoreAngSeparate\\Comp586Project\\Comp586ProjectSPA\\SpaServer\\SpaServer\\SpaServer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Suiten\\Desktop\\CS OOSD\\CoreAngSeparate\\SpaServer\\SpaServer\\SpaServer.csproj",
+        "projectUniqueName": "C:\\Users\\Suiten\\Desktop\\CS OOSD\\CoreAngSeparate\\Comp586Project\\Comp586ProjectSPA\\SpaServer\\SpaServer\\SpaServer.csproj",
         "projectName": "SpaServer",
-        "projectPath": "C:\\Users\\Suiten\\Desktop\\CS OOSD\\CoreAngSeparate\\SpaServer\\SpaServer\\SpaServer.csproj",
+        "projectPath": "C:\\Users\\Suiten\\Desktop\\CS OOSD\\CoreAngSeparate\\Comp586Project\\Comp586ProjectSPA\\SpaServer\\SpaServer\\SpaServer.csproj",
         "packagesPath": "C:\\Users\\Suiten\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Suiten\\Desktop\\CS OOSD\\CoreAngSeparate\\SpaServer\\SpaServer\\obj\\",
+        "outputPath": "C:\\Users\\Suiten\\Desktop\\CS OOSD\\CoreAngSeparate\\Comp586Project\\Comp586ProjectSPA\\SpaServer\\SpaServer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

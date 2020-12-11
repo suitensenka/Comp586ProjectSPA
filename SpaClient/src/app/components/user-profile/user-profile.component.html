@@ -1,0 +1,53 @@
+<ng-container *ngIf="auth.isAuthenticated$ | async; else loggedOut">
+<ul *ngIf="auth.user$ | async as user">
+    <p>Hello <b>"{{ user.name }}" </b>!</p>
+    
+    <p>You can check your current status here in this screen.</p>
+    <p><i>Notes: Depending on how many comments and boards you have made, it may take sometimes to load! Please be patient.</i></p>
+    
+    
+    <h4>You are the original poster of the following Board:</h4>
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="userInfo">
+    <thead>
+    <tr>
+        <th>Board Subject</th>
+        <th>Board Id</th>
+
+    </tr>
+    </thead>
+    <tbody>
+
+    <tr *ngFor = "let board of userInfo.boards">
+        <td>{{board.subject}}</td>
+        <td>{{board.id}}</td>
+    </tr>
+
+    </tbody>
+</table>
+<br>
+<hr>
+
+<h4>You have made the following comments:</h4>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="userInfo">
+
+    <thead>
+        <tr>
+            <th>Comment Made</th>
+            <th>Board</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let comment of userInfo.comments">
+            <td>{{comment.content}}</td>
+            <td>{{comment.boardName}}</td>
+        </tr>
+    </tbody>
+</table>
+
+</ul>
+</ng-container>
+
+<ng-template #loggedOut>
+    <p>Hello <b>"Anonymous"</b>, Please log in to see this page.</p>
+</ng-template>

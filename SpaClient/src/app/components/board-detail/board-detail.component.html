@@ -1,0 +1,54 @@
+
+<h1 *ngIf=board> Board #{{board.id}}</h1>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="board">
+    <thead>
+    <tr>
+        <h2><em>{{board.subject}}</em></h2>
+    </tr>
+    </thead>
+    <tbody>
+        <tr><b>Aurhot:</b> {{board.owner}}</tr>
+        <tr><b>Content:</b> {{board.content}}</tr>
+    </tbody>
+</table>
+<br>
+<hr>
+<h5>Comments:</h5>
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="board">
+    
+    <thead>
+    <tr>
+        <th>User</th>
+        <th>Comment</th>
+        <th>Id#</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let comment of board.comments">
+            <td><b>{{comment.owner}}</b>:</td>
+            <td>{{comment.content}}</td>
+            <td>{{comment.id}}</td>
+        </tr>
+    </tbody>
+
+</table>
+
+<hr><hr>
+<div  *ngIf="auth.user$ | async as user1">
+    <h3>Leave a Comment:</h3>
+    <form [formGroup]="commentForm" (ngSubmit)="addNewComment()">
+        <label>
+            Commenting as: 
+            <input type="text" style="border:none;font-weight: bold" formControlName="user" value="{{user1.name}}" readonly="readonly">
+        </label>
+        <br>
+        <label><b>Comment:  </b><br>
+            <input type="text" formControlName="content" value="Enter your beautiful comment!" required>
+        </label>
+        <hr>
+    <button type="submit">Comment!</button>
+    </form>
+</div>
+
+

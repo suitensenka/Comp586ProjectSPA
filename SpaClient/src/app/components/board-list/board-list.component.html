@@ -1,0 +1,36 @@
+<router-outlet></router-outlet>
+<ng-container *ngIf="route.children.length === 0">
+<div class="nav-item">
+    <a
+      routerLink="/newBoard"
+      class="nav-link"
+      routerLinkActive="router-link-exact-active"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+    <button>+ New Board</button>
+    </a>
+  </div>
+  <p> Not seeing your new post? Click Refresh</p>
+  <button (click)="refreshPage()">Refresh!</button>
+
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="boardInfo">
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Subject</th>
+        <th>Author</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let board of boardInfo">
+        <td>#{{board.id}}</td>
+        <td>{{board.subject}}</td>
+        <td>By: {{board.owner}}</td>
+        <td><button (click)="routeToBoardId(board.id)">Open</button></td>
+    </tr>
+    </tbody>
+</table>
+</ng-container>
+

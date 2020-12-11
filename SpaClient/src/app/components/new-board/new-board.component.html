@@ -1,0 +1,26 @@
+
+<h1>Adding New Board!</h1>
+
+<router-outlet></router-outlet>
+<div  *ngIf="auth.user$ | async as user1">
+<form [formGroup]="boardForm" (ngSubmit)="addNewBoard()">
+    <label>
+        Posting as: 
+        <input type="text" style="border:none;font-weight: bold" formControlName="user" value="{{user1.name}}" readonly="readonly">
+    </label>
+    <br><hr>
+    <label><b>Board's Subject (Cannot be blank):  </b><br>
+        <input type="text" formControlName="subject" value="New Thread" required>
+    </label>
+    <br>
+    <label><b>Content:  </b><br>
+        <input type="text" formControlName="content" value="Enter your beautiful content!" required>
+    </label>
+    <hr>
+<button type="submit">Add</button>
+</form>
+
+</div>
+
+
+

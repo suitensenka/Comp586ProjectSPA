@@ -1,0 +1,19 @@
+<h1>Comp 586 Project - Simple SPA App</h1>>
+
+<p>Welcome!</p>
+
+<p>This SPA is designed to allow user to post, delete, and view forum and comments they have made.</p>
+
+<p>It uses Auth0 as the middleware to implement authentication.</p>
+
+<ng-container *ngIf="auth.isAuthenticated$ | async; else loggedOut">
+    <ul *ngIf="auth.user$ | async as user">
+    <p>Hello <b>"{{ user.name }} "</b>! You are now logged in. Feel free to check out the rest of the sites!</p>
+        
+    </ul>
+</ng-container>
+
+<ng-template #loggedOut>
+    <p>Hello <b>"Anonymous"</b>. Please log in to continue.</p>
+    <p>If you do not have an account, please contact your administrator.</p>
+</ng-template>

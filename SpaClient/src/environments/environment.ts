@@ -12,7 +12,7 @@ export const environment = {
     audience,
   },
   httpInterceptor: {
-    allowedList: [{uri: "https://comp586spaserver.com/*"}],
+    allowedList: [{uri: "https://spaserver.comp586spaclient.xyz:81/*"}],
   },
 
   dev: {

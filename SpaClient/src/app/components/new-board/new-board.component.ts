@@ -42,8 +42,6 @@ export class NewBoardComponent{
       this.router.navigate(['/boardList']);
     
     },error => console.error(error));
-
-    console.log(this.boardForm.getRawValue())
   }
 
   reset()

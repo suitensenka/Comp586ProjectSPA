@@ -2,5 +2,5 @@
     "domain": "dev--wzskmtv.us.auth0.com",
     "clientId": "VVtHsDYNCUUmOY67lQaWDt1HX5CUQq0b",
     "audience": "SpaServer586",
-    "apiUrl": "https://comp586spaserver.com/"
+    "apiUrl": "https://spaserver.comp586spaclient.xyz:81/"
 } 

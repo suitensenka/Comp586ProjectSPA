@@ -1,0 +1,24 @@
+
+{
+    "region" : "us-east-1",
+    "configuration" : "Debug",
+    "framework"     : "netcoreapp3.1",
+    "self-contained" : false,
+    "application"    : "SpaServer",
+    "environment"    : "SpaServer-dev",
+    "enable-xray"    : false,
+    "enhanced-health-type" : "basic",
+    "additional-options"   : "\"aws:autoscaling:launchconfiguration,SecurityGroups\"=\"sg-77881b43\";\"aws:ec2:vpc,Subnets\"=\"subnet-785e0e35\"",
+    "solution-stack"       : "64bit Windows Server Core 2019 v2.6.0 running IIS 10.0",
+    "environment-type"     : "SingleInstance",
+    "cname"                : "spaserver-dev",
+    "instance-type"        : "t2.micro",
+    "key-pair"             : "",
+    "instance-profile"     : "aws-elasticbeanstalk-ec2-role",
+    "service-role"         : "aws-elasticbeanstalk-service-role",
+    "proxy-server"         : "nginx",
+    "profile"              : "default",
+    "health-check-url"     : "/",
+    "iis-website"          : "Default Web Site",
+    "app-path"             : "/"
+}

@@ -2,15 +2,24 @@
 
 <p>Welcome!</p>
 
-<p>This SPA is designed to allow user to post, delete, and view forum and comments they have made.</p>
+<p>This SPA is designed to allow user to post, and view private forums and comments they have made.</p>
 
 <p>It uses Auth0 as the middleware to implement authentication.</p>
 
 <ng-container *ngIf="auth.isAuthenticated$ | async; else loggedOut">
-    <ul *ngIf="auth.user$ | async as user">
-    <p>Hello <b>"{{ user.name }} "</b>! You are now logged in. Feel free to check out the rest of the sites!</p>
-        
+    
+    <p *ngIf="auth.user$ | async as user">>Hello <b>"{{ user.name }} "</b>! You are now logged in. Feel free to check out the rest of the sites!</p>
+    
+    <br>
+    <p>Here are something you can do as an authenticated user:</p>
+    <ul>
+        <li>View all the comments and board you have made</li>
+        <li>Add a new board</li>
+        <li>Leave a comment</li>
+        <li>See what others have posted!</li>
     </ul>
+
+    
 </ng-container>
 
 <ng-template #loggedOut>

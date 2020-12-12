@@ -1,8 +1,6 @@
 import { Component, OnInit} from '@angular/core';
 import { AuthService } from '@auth0/auth0-angular';
 import { HttpClient, HttpHeaders} from '@angular/common/http';
-import { map } from 'rxjs/operators';
-import { Auth0ClientService } from '@auth0/auth0-angular/lib/auth.client';
 import { Inject } from '@angular/core';
 
 
@@ -20,7 +18,6 @@ export class UserProfileComponent {
     var userName = "";
 
     this.auth.user$.subscribe( r =>{userName = r.name;
-      console.log(this.baseUrl + 'api/Users/'+ userName);
 
       http.get<UserInfo>(this.baseUrl + 'api/Users/'+ userName).subscribe(result =>{
         this.userInfo = result;
@@ -37,16 +34,13 @@ export class UserProfileComponent {
   {
     var userName = "";
     this.auth.user$.subscribe( r =>{userName = r.name;
-      console.log(this.baseUrl + 'api/Users/'+ userName);
       var data = {
         user: userName,
         username: userName,
         role: "user"
       };
-      var jsonData = JSON.stringify(data);
-      console.log(jsonData);
       
-      this.http.post(this.baseUrl + 'api/Users', jsonData);
+      this.http.post(this.baseUrl + 'api/Users', data);
 
     });
   }

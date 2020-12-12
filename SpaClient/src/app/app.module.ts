@@ -42,7 +42,7 @@ import { NewBoardComponent } from './components/new-board/new-board.component';
       clientId: 'VVtHsDYNCUUmOY67lQaWDt1HX5CUQq0b',
       audience: 'SpaServer586',
       httpInterceptor: {
-        allowedList: [{uri:'https://comp586spaserver.com/*'}],
+        allowedList: [{uri:'https://spaserver.comp586spaclient.xyz:81/*'}],
        //allowedList: env.httpInterceptor.allowedList,
         
       },

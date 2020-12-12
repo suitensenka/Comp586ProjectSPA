@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA8h8KakI5qUOUkIhOZwA55AAAAAACAAAAAAAQZgAAAAEAACAAAADBKgT2OLg5ZzF1fserEx4n5RTwhpFQiHy/84Xub1uxPgAAAAAOgAAAAAIAACAAAABt0i4HRqWjOQEJr0n1d1VHyWJimjFRz0fY8XMnVkeCulAAAACX9lMc8eqyMs6HG94kVGD9EAi5Dc81cTopsPpZ6Tn2RU1XMzsJcbTf0RmGGceiWJ/va3fA88b0Iy62a/PlSj53p0NmiCr8udhu+5MiHU2M4EAAAAA+es1EQS/OtTNMW9jsksjyCVWAOJFWJe6qys/YNT11ki6vQrwlV8BIBjXTMPFsik8S79eWwCeZe/Y6zYPVZPRc</EncryptedPassword>
+    <_PublishTargetUrl>C:\Users\Suiten\Desktop\CS OOSD\CoreAngSeparate\Comp586Project\server</_PublishTargetUrl>
+  </PropertyGroup>
+</Project>

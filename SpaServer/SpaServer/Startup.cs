@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.IdentityModel.Logging;
 using Microsoft.IdentityModel.Tokens;
 using SpaServer.Models;
 using System.Security.Claims;
@@ -49,13 +50,13 @@ namespace SpaServer
                 };
             });
 
-            services.AddAuthorization(options =>
-            {
-                options.AddPolicy("read:messages", policy => policy.Requirements.Add(new HasScopeRequirement("read:messages", Configuration["Auth0:Domain"])));
-            });
+            //services.AddAuthorization(options =>
+            //{
+             //   options.AddPolicy("read:messages", policy => policy.Requirements.Add(new HasScopeRequirement("read:messages", Configuration["Auth0:Domain"])));
+            //});
 
             services.AddCors();
-            services.AddSingleton<IAuthorizationHandler, HasScopeHandler>();
+            //services.AddSingleton<IAuthorizationHandler, HasScopeHandler>();
 
             services.AddControllers();
             services.AddDbContext<Spa586DBContext>(options => options.UseMySql(ConnectionString, x => x.ServerVersion("8.0.20-mysql")));
@@ -69,7 +70,10 @@ namespace SpaServer
                 app.UseDeveloperExceptionPage();
             }
 
-            
+            IdentityModelEventSource.ShowPII = true;
+
+
+
             app.UseHttpsRedirection();
 
             app.UseRouting();
